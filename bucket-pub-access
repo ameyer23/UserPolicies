@@ -1,0 +1,13 @@
+#Bucket Policy - Allow for Public Access to Bucket Objects
+{
+  "Version":"2012-10-17",
+  "Statement":[
+      {
+         "Sid":"AllowPublicAccessObjects",
+         "Effect":"Allow",
+         "Principal": "*",
+         "Action":["s3:GetObject"],
+         "Resource":["<BUCKET_ARN>/*"]
+     }
+  ]
+}
